@@ -1,5 +1,7 @@
 # Review Services
 
+![TravisCI](https://travis-ci.org/ChrisTheShark/reviews-service.svg?branch=master)
+
 Simple Spring Boot sample project.
 
 ## Getting Started
