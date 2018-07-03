@@ -1,7 +1,3 @@
-workspace:
-  base: /drone
-  path: reviews-service
-  
 pipeline:  
   build:
     when:
