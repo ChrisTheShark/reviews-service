@@ -1,0 +1,11 @@
+workspace:
+  base: /drone
+  path: reviews-service
+  
+pipeline:  
+  build:
+    when:
+      event: push      
+    image: openjdk:8-jdk-slim
+    commands:
+      - ./mvnw package
