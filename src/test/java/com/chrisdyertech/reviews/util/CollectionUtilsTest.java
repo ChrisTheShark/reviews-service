@@ -10,17 +10,17 @@ import org.junit.Test;
 
 import com.chrisdyertech.reviews.domain.Review;
 
-public class CollectionsTest {
+public class CollectionUtilsTest {
 
 	@Test
 	public void testToList() throws Exception {
-		List<Review> reviews = Collections.toList(Arrays.asList(new Review()));
+		List<Review> reviews = CollectionUtils.toList(Arrays.asList(new Review()));
 		assertEquals(1, reviews.size());
 	}
 	
 	@Test
 	public void testToListEmptyIterable() throws Exception {
-		List<Review> empty = Collections.toList(new ArrayList<>());
+		List<Review> empty = CollectionUtils.toList(new ArrayList<>());
 		assertEquals(0, empty.size());
 	}
 

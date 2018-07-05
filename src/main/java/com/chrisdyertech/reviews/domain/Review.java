@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
 
 /**
  * Simple <code>class</code> represents a review.
@@ -14,15 +17,19 @@ import javax.persistence.Table;
 public class Review {
 	
 	@Id
+	@Positive
 	@GeneratedValue
 	private int id;
 	
+	@Positive
 	@Column(name = "user_id")
 	private int userId;
 	
+	@PositiveOrZero
 	@Column(name = "rating")
 	private double rating;
 	
+	@NotEmpty
 	@Column(name = "comment")
 	private String comment;
 	

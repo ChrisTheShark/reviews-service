@@ -1,4 +1,4 @@
-package com.chrisdyertech.service;
+package com.chrisdyertech.reviews.service;
 
 import java.util.List;
 
