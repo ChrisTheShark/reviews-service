@@ -1,4 +1,4 @@
-package com.chrisdyertech.reviews.controllers;
+package com.chrisdyertech.reviews.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -12,7 +12,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.chrisdyertech.reviews.controllers.ReviewController;
+import com.chrisdyertech.reviews.controller.ReviewController;
 
 /**
  * Testing for {@link ReviewController}.

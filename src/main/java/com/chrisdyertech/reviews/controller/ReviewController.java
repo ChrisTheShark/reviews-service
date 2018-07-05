@@ -1,4 +1,4 @@
-package com.chrisdyertech.reviews.controllers;
+package com.chrisdyertech.reviews.controller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -20,7 +20,7 @@ public class ReviewController {
 	@GetMapping
 	public List<Review> getAllReviews() {
 		return Arrays.asList(
-				new Review(1, 3.5, "Pretty ok product. Didn't last long enough."));
+				new Review(1, 1, 3.5, "Pretty ok product. Didn't last long enough."));
 	}
 	
 }
