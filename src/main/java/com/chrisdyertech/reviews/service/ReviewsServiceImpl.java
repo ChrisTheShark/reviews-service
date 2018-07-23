@@ -34,6 +34,11 @@ public class ReviewsServiceImpl implements ReviewsService {
 		}
 		return null;
 	}
+	
+	@Override
+	public List<Review> getByProductId(int productId) {
+		return repository.findByProductId(productId);
+	}
 
 	@Override
 	public Review add(Review review) {
@@ -42,7 +47,7 @@ public class ReviewsServiceImpl implements ReviewsService {
 
 	@Override
 	public void delete(Review review) {
-		repository.delete(review);
+		repository.deleteById(review.getId());
 	}
 
 }

@@ -26,6 +26,13 @@ public interface ReviewsService {
 	public Review getById(int id);
 	
 	/**
+	 * Get all {@link Review}s by a provided <code>int</code> product identifier.
+	 * 
+	 * @return a calculated {@link java.util.List} of {@link Review}s.
+	 */
+	public List<Review> getByProductId(int productId);
+	
+	/**
 	 * Add a {@link Review}.
 	 * 
 	 * @param review the provided {@link Review} to add

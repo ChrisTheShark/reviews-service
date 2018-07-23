@@ -57,6 +57,26 @@ public class ReviewControllerTest {
 	}
 	
 	@Test
+	public void testGetReviewByIdHappyPath() throws Exception {
+		when(mockReviewsService.getById(1))
+			.thenReturn(new Review(1, 2, 4.3, "This is great."));
+		
+		mockMvc.perform(get("/reviews/1"))
+			.andExpect(status().isOk())
+			.andDo(print());
+	}
+	
+	@Test
+	public void testGetReviewByProductIdHappyPath() throws Exception {
+		when(mockReviewsService.getByProductId(1))
+			.thenReturn(Arrays.asList(new Review(1, 2, 4.3, "This is great.")));
+		
+		mockMvc.perform(get("/reviews/product/1"))
+			.andExpect(status().isOk())
+			.andDo(print());
+	}
+	
+	@Test
 	public void testPostAddReviewHappyPath() throws Exception {
 		Review mockReview = new Review();
 		mockReview.setId(1);
@@ -65,7 +85,7 @@ public class ReviewControllerTest {
 		
 		mockMvc.perform(post("/reviews")
 				.contentType(MediaType.APPLICATION_JSON)
-				.content("{ \"userId\": 2, \"rating\": 4.3, \"comment\": \"This is great\" }"))
+				.content("{ \"userId\": 2, \"productId\": 2, \"rating\": 4.3, \"comment\": \"This is great\" }"))
 		.andExpect(status().isCreated());
 		
 		verify(mockReviewsService).add(Mockito.any(Review.class));

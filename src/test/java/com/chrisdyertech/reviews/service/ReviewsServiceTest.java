@@ -52,6 +52,16 @@ public class ReviewsServiceTest {
 		verify(mockRepository).findById(Mockito.anyInt());
 		assertNotNull(review);
 	}
+	
+	@Test
+	public void testGetByProductId() throws Exception {
+		List<Review> reviews = Arrays.asList(new Review());
+		when(mockRepository.findByProductId(Mockito.anyInt())).thenReturn(reviews);
+		
+		List<Review> returnedList = service.getByProductId(1);
+		
+		assertEquals(1, returnedList.size());
+	}
 
 	@Test
 	public void testAdd() throws Exception {
@@ -69,7 +79,7 @@ public class ReviewsServiceTest {
 	@Test
 	public void testDelete() throws Exception {
 		service.delete(new Review());
-		verify(mockRepository).delete(Mockito.any(Review.class));
+		verify(mockRepository).deleteById(Mockito.any(Integer.class));
 	}
 
 }
