@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.chrisdyertech.reviews</groupId>
-	<artifactId>reviews-service</artifactId>
+	<artifactId>reviews-services</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>reviews-service</name>
+	<name>reviews-services</name>
 	<description>Simple data service retrieves reviews.</description>
 
 	<parent>
