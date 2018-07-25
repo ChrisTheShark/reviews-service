@@ -10,7 +10,7 @@
 	<packaging>jar</packaging>
 
 	<name>reviews-service</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Simple data service retrieves reviews.</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -52,6 +52,20 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>au.com.dius</groupId>
+			<artifactId>pact-jvm-provider-spring_2.12</artifactId>
+			<version>3.5.19</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>au.com.dius</groupId>
+			<artifactId>pact-jvm-provider-junit_2.12</artifactId>
+			<version>3.5.19</version>
 			<scope>test</scope>
 		</dependency>
 

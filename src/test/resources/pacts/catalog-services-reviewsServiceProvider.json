@@ -1,0 +1,52 @@
+{
+    "provider": {
+        "name": "reviewsServiceProvider"
+    },
+    "consumer": {
+        "name": "catalog-services"
+    },
+    "interactions": [
+        {
+            "description": "a request to the reviews service",
+            "request": {
+                "method": "GET",
+                "path": "/reviews/product/2"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": [
+                    {
+                        "id": 2,
+                        "userId": 1,
+                        "productId": 2,
+                        "rating": 3.6,
+                        "comment": "This didn't meet my expectations."
+                    },
+                    {
+                        "id": 3,
+                        "userId": 2,
+                        "productId": 2,
+                        "rating": 4.0,
+                        "comment": "Not terrible but could use improvement."
+                    }
+                ]
+            },
+            "providerStates": [
+                {
+                    "name": "a product with created reviews"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pactSpecification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.19"
+        }
+    }
+}

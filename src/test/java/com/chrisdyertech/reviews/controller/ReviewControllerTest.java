@@ -21,6 +21,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.chrisdyertech.reviews.controller.ReviewController;
 import com.chrisdyertech.reviews.domain.Review;
 import com.chrisdyertech.reviews.service.ReviewsService;
 

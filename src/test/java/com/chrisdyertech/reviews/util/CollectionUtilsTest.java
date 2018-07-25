@@ -9,6 +9,7 @@ import java.util.List;
 import org.junit.Test;
 
 import com.chrisdyertech.reviews.domain.Review;
+import com.chrisdyertech.reviews.util.CollectionUtils;
 
 public class CollectionUtilsTest {
 
